@@ -222,7 +222,7 @@ class Lang {
 }
 
 // The list of all processed languages
-final List langs = [
+final langs = [
   new Lang(JAVA, JAVA_DESC, JAVA_CMT_SINGLE)
     ..withMulti(JAVA_CMT_FROM, JAVA_CMT_TO)
     ..withRmInline(JAVA_RM_INLINE), //

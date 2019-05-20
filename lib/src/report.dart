@@ -173,7 +173,7 @@ void _appendToFile(List<String> lines, String out, {bool stdoutIfNull: true}) {
 
   new File(out)
     ..createSync(recursive: true)
-    ..writeAsStringSync(contentAsString, mode: FileMode.APPEND, flush: true);
+    ..writeAsStringSync(contentAsString, mode: FileMode.append, flush: true);
 }
 
 /// Sums report files to a single ReportData.

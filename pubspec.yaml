@@ -5,15 +5,14 @@ homepage: https://github.com/SigmaInformatique
 author: Sigma Informatique <github@sigma.fr>
 
 environment:
-  sdk: '>=1.10.0 <2.0.0'
+  sdk: '>=2.3.0 <3.0.0'
 
 dependencies:
-  args: "^0.13.1"
-  logging: "^0.11.1"
-  petitparser: "^1.4.3"
+  args:
+  logging:
 
 dev_dependencies:
-  test: "^0.12.2"
+  test:
 
 executables:
   dloc: dloc

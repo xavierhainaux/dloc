@@ -234,13 +234,13 @@ ResultByFile _linesInFileGuessingCharset(File file, String filename, Lang lang, 
   ResultByFile resByFile = new ResultByFile();
   int idxMultiComment = -1;
   try {
-    file.readAsLinesSync(encoding: UTF8).forEach((line) {
+    file.readAsLinesSync(encoding: utf8).forEach((line) {
       idxMultiComment = _handleLine(file, line, lang, idxMultiComment, resByFile);
     });
   } on FileSystemException {
     resByFile.reset();
     idxMultiComment = -1;
-    file.readAsLinesSync(encoding: LATIN1).forEach((line) {
+    file.readAsLinesSync(encoding: latin1).forEach((line) {
       idxMultiComment = _handleLine(file, line, lang, idxMultiComment, resByFile);
     });
   }
@@ -268,7 +268,7 @@ ResultByFile _linesInFile(File file, String charset, String filename, Lang lang,
   if (charset == null) {
     return _linesInFileGuessingCharset(file, filename, lang, result);
   }
-  return _linesInFileKnowingCharset(file, ("latin1" == charset) ? LATIN1 : UTF8, filename, lang, result);
+  return _linesInFileKnowingCharset(file, ("latin1" == charset) ? latin1 : utf8, filename, lang, result);
 }
 
 void _processFile(File entity, Map<String, RegExp> matchers, LocResult result) {
