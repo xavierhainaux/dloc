@@ -28,7 +28,7 @@ List<String> getFilesFromDir(String dir) {
 }
 
 void doTest() {
-  String root = '${Directory.current.path}/data';
+  String root = '${Directory.current.path}/test/data';
   List<String> files = [root + '/report/dloc-sub1.csv', root + '/report/dloc-sub2.csv'];
   ReportData data = aggregate(files);
 

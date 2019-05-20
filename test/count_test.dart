@@ -36,7 +36,7 @@ void doTest() {
 
   initialize(new CommandLineArgs(argResults));
 
-  LocResult results = countLinesOfCode('${Directory.current.path}/data/lang');
+  LocResult results = countLinesOfCode('${Directory.current.path}/test/data/lang');
 
   ResultByLang javaResults = results.data[_getLangFromDesc(JAVA_DESC).ext];
   group("Count Java", () {
